@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-NG">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore MAX KITCHEN's contemporary Nigerian menu in Abeokuta, from generous plates and grills to traditional drinks.">
+    <title>Menu | MAX KITCHEN Abeokuta</title>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="MAX KITCHEN">
+    <meta property="og:title" content="Menu | MAX KITCHEN Abeokuta">
+    <meta property="og:description" content="Explore MAX KITCHEN's contemporary Nigerian menu in Abeokuta, from generous plates to refreshing drinks.">
+    <meta property="og:url" content="https://maxkitchen.ng/menu.html">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1515003193392-cf4d1c6d6b9f?auto=format&fit=crop&w=1600&q=80">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Menu | MAX KITCHEN Abeokuta">
+    <meta name="twitter:description" content="Explore MAX KITCHEN's contemporary Nigerian menu in Abeokuta, from generous plates to refreshing drinks.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1515003193392-cf4d1c6d6b9f?auto=format&fit=crop&w=1600&q=80">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="MAX KITCHEN home">MAX <span>KITCHEN</span></a>
+        <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false"><span></span><span></span><span></span><b>Menu</b></button>
+        <nav class="site-navigation" id="site-navigation" aria-label="Primary navigation">
+            <div class="nav-links"><a href="index.html">Home</a><a class="active" href="menu.html">Menu</a><a href="about.html">About</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></div>
+            <a class="nav-reserve" href="reservation.html">Reserve a Table</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="menu-hero" aria-labelledby="menu-title">
+            <div class="menu-hero-content reveal"><p class="eyebrow">MAX KITCHEN delivery</p><h1 id="menu-title">Order <em>Online</em></h1><p>Familiar Nigerian flavours, prepared fresh and delivered to your door anywhere within Abeokuta.</p><a class="button button-gold menu-hero-action" href="#order-menu">Browse the menu</a></div>
+        </section>
+
+        <section class="menu-section content-section" id="order-menu" aria-labelledby="menu-heading">
+            <div class="menu-intro reveal-on-scroll"><div><p class="section-label">Choose your favourites</p><h2 id="menu-heading">Delivered with <em>care.</em></h2></div><p>Build your order from our full kitchen menu. Your order tray stays with you as you browse.</p></div>
+            <div class="menu-filters" role="group" aria-label="Browse the menu">
+                <div class="menu-primary-filters" data-menu-sections role="tablist" aria-label="Menu sections"></div>
+                <div class="menu-subcategory-filters" data-menu-subcategories role="group" aria-label="Food subcategories"></div>
+            </div>
+            <div class="menu-grid" data-menu-grid></div>
+        </section>
+    </main>
+
+    <button class="cart-launcher" type="button" data-cart-open aria-controls="cart-drawer" aria-expanded="false">
+        <span class="cart-launcher-label">Your order</span>
+        <span class="cart-count" data-cart-count>0</span>
+        <span class="cart-launcher-total" data-cart-launcher-total>₦0</span>
+    </button>
+
+    <div class="cart-overlay" data-cart-overlay hidden></div>
+    <aside class="cart-drawer" id="cart-drawer" data-cart-drawer aria-hidden="true" aria-labelledby="cart-title">
+        <div class="cart-header">
+            <div><p class="section-label">Delivered to your door</p><h2 id="cart-title">Your <em>order</em></h2></div>
+            <button class="cart-close" type="button" data-cart-close aria-label="Close your order">×</button>
+        </div>
+        <div class="cart-body">
+            <p class="cart-empty" data-cart-empty>Your order is waiting for something delicious.</p>
+            <div class="cart-items" data-cart-items></div>
+        </div>
+        <div class="cart-summary">
+            <div><span>Subtotal</span><strong data-cart-subtotal>₦0</strong></div>
+            <div><span>Delivery</span><strong data-cart-delivery>₦0</strong></div>
+            <div class="cart-total"><span>Total</span><strong data-cart-total>₦0</strong></div>
+            <button class="button button-gold cart-checkout" type="button" data-cart-checkout disabled>Continue to checkout</button>
+            <p class="cart-note">Delivery orders are available within Abeokuta. Checkout details will be collected next.</p>
+        </div>
+    </aside>
+
+    <div class="customization-overlay" data-customization-overlay hidden></div>
+    <section class="customization-modal" data-customization-modal role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="customization-title">
+        <div class="customization-header">
+            <div><p class="section-label">Meal Options</p><h2 id="customization-title" data-customization-name>Choose your options</h2></div>
+            <button class="cart-close" type="button" data-customization-close aria-label="Close customization">×</button>
+        </div>
+        <div class="customization-body">
+            <div class="customization-base"><span>Base price</span><strong data-customization-base>₦0</strong></div>
+            <p class="customization-note">Choose one or more additions to complete your plate.</p>
+            <div class="addon-list" data-addon-list></div>
+        </div>
+        <div class="customization-footer">
+            <div><span>Your item total</span><strong data-customization-total>₦0</strong></div>
+            <button class="button button-gold" type="button" data-customization-add>Add to order</button>
+        </div>
+    </section>
+
+    <div class="checkout-overlay" data-checkout-overlay hidden></div>
+    <section class="checkout-modal" data-checkout-modal role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="checkout-title">
+        <div class="customization-header">
+            <div><p class="section-label">Final review</p><h2 id="checkout-title">Your <em>checkout</em></h2></div>
+            <button class="cart-close" type="button" data-checkout-close aria-label="Close checkout">×</button>
+        </div>
+        <div class="checkout-body" data-checkout-summary></div>
+        <div class="checkout-footer"><strong data-checkout-total>₦0</strong><button class="button button-gold" type="button" data-place-order>Place order</button></div>
+    </section>
+
+    <footer class="site-footer" data-site-footer></footer>
+    <script src="js/site-components.js" defer></script>
+    <script src="js/script.js" defer></script>
+</body>
+</html>

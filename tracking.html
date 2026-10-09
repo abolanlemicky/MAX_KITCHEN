@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-NG">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Track your MAX KITCHEN order in Abeokuta.">
+    <title>Track Order | MAX KITCHEN Abeokuta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-tracking-page>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header scrolled">
+        <a class="brand" href="index.html" aria-label="MAX KITCHEN home">MAX <span>KITCHEN</span></a>
+        <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false"><span></span><span></span><span></span><b>Menu</b></button>
+        <nav class="site-navigation" id="site-navigation" aria-label="Primary navigation">
+            <div class="nav-links"><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="about.html">About</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></div>
+            <a class="nav-reserve" href="reservation.html">Reserve a Table</a>
+        </nav>
+    </header>
+
+    <main id="main-content" class="tracking-page">
+        <section class="tracking-hero" aria-labelledby="tracking-title">
+            <div class="tracking-hero-content">
+                <p class="section-label">Your order</p>
+                <h1 id="tracking-title">Track your <em>order.</em></h1>
+                <p>Enter the order number from your payment confirmation to see the latest status.</p>
+            </div>
+        </section>
+        <section class="tracking-section content-section" aria-labelledby="tracking-form-title">
+            <div class="tracking-copy">
+                <p class="section-label">Stay in the loop</p>
+                <h2 id="tracking-form-title">From our kitchen <em>to you.</em></h2>
+                <p>Paid orders are updated as they move from order received to preparation, collection or delivery.</p>
+            </div>
+            <form class="tracking-form" data-tracking-form>
+                <label for="order-number">Order number</label>
+                <input id="order-number" name="orderNumber" type="text" placeholder="e.g. MK-1720000000000-A1B2C3D4" autocomplete="off" required>
+                <button class="button button-gold" type="submit">Check order status</button>
+                <p class="tracking-status" data-tracking-status aria-live="polite"></p>
+                <div class="tracking-result" data-tracking-result hidden>
+                    <div class="tracking-result-meta">
+                        <div><span>Order number</span><strong data-tracking-number></strong></div>
+                        <div><span>Current status</span><strong data-tracking-current-status></strong></div>
+                    </div>
+                    <div class="tracking-progress" aria-label="Order progress">
+                        <span data-tracking-step="Order Received">Order Received</span>
+                        <span data-tracking-step="Preparing">Preparing</span>
+                        <span data-tracking-step="Ready">Ready</span>
+                        <span data-tracking-step="Out for Delivery">Out for Delivery</span>
+                        <span data-tracking-step="Delivered">Delivered</span>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer" data-site-footer></footer>
+    <script src="js/site-components.js" defer></script>
+    <script src="js/script.js" defer></script>
+</body>
+</html>

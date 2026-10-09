@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-NG">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MAX KITCHEN restaurant order management.">
+    <title>Restaurant Orders | MAX KITCHEN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-restaurant-orders-page>
+    <main class="restaurant-orders-page" id="main-content">
+        <section class="restaurant-orders-header">
+            <div>
+                <p class="section-label">MAX KITCHEN operations</p>
+                <h1>Incoming <em>orders.</em></h1>
+                <p>Review paid and pending orders, then keep customers informed as each order moves through the kitchen.</p>
+            </div>
+            <a class="button button-outline" href="index.html">Back to website</a>
+        </section>
+        <section class="restaurant-orders-toolbar" aria-label="Order management controls">
+            <form class="restaurant-access-form" data-restaurant-access-form>
+                <label for="restaurant-admin-key">Restaurant management key</label>
+                <div class="restaurant-access-row">
+                    <input id="restaurant-admin-key" type="password" autocomplete="off" required>
+                    <button class="button button-gold" type="submit">Load orders</button>
+                </div>
+                <p class="restaurant-orders-status" data-restaurant-orders-status aria-live="polite">Enter the server-side management key to load orders.</p>
+            </form>
+            <button class="button button-outline restaurant-refresh" type="button" data-restaurant-refresh disabled>Refresh orders</button>
+        </section>
+        <section class="restaurant-order-list" data-restaurant-order-list aria-live="polite">
+            <p class="restaurant-empty">Orders will appear here after access is granted.</p>
+        </section>
+    </main>
+    <script src="js/restaurant-orders.js" defer></script>
+</body>
+</html>

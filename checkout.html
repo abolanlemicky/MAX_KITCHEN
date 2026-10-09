@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-NG">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete your MAX KITCHEN food order for delivery or pickup in Abeokuta.">
+    <title>Checkout | MAX KITCHEN Abeokuta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-checkout-page>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header scrolled">
+        <a class="brand" href="index.html" aria-label="MAX KITCHEN home">MAX <span>KITCHEN</span></a>
+        <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false"><span></span><span></span><span></span><b>Menu</b></button>
+        <nav class="site-navigation" id="site-navigation" aria-label="Primary navigation">
+            <div class="nav-links"><a href="index.html">Home</a><a class="active" href="menu.html">Menu</a><a href="about.html">About</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></div>
+            <a class="nav-reserve" href="reservation.html">Reserve a Table</a>
+        </nav>
+    </header>
+
+    <main id="main-content" class="checkout-page">
+        <section class="checkout-hero" aria-labelledby="checkout-page-title">
+            <p class="section-label">Your order</p>
+            <h1 id="checkout-page-title">Complete your <em>checkout.</em></h1>
+            <p>Tell us where to bring your order, or choose pickup from our Abeokuta kitchen.</p>
+        </section>
+        <section class="checkout-layout content-section">
+            <form class="checkout-form" data-checkout-form novalidate>
+                <fieldset>
+                    <legend>Contact details</legend>
+                    <div class="checkout-form-grid">
+                        <label class="form-field"><span>Full name</span><input name="fullName" type="text" autocomplete="name" required></label>
+                        <label class="form-field"><span>Phone number</span><input name="phone" type="tel" autocomplete="tel" required></label>
+                        <label class="form-field form-field-full"><span>Email address</span><input name="email" type="email" autocomplete="email" required></label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>How would you like your order?</legend>
+                    <div class="fulfilment-options">
+                        <label class="fulfilment-option is-selected"><input type="radio" name="fulfilment" value="delivery" checked><span><strong>Delivery</strong><small>Bring my order to my location</small></span></label>
+                        <label class="fulfilment-option"><input type="radio" name="fulfilment" value="pickup"><span><strong>Pickup</strong><small>I will collect from the restaurant</small></span></label>
+                    </div>
+                </fieldset>
+                <fieldset class="delivery-fields" data-delivery-fields>
+                    <legend>Delivery details</legend>
+                    <div class="checkout-form-grid">
+                        <label class="form-field form-field-full"><span>Delivery address</span><input name="address" type="text" autocomplete="street-address" required></label>
+                        <label class="form-field"><span>City</span><input name="city" type="text" value="Abeokuta" autocomplete="address-level2" required></label>
+                        <label class="form-field"><span>Area / location</span><input name="area" type="text" autocomplete="address-line2" placeholder="e.g. GRA, Kuto or Olomore" required></label>
+                        <label class="form-field form-field-full"><span>Delivery instructions <small>(optional)</small></span><textarea name="instructions" rows="4" placeholder="Gate details, landmarks or timing notes"></textarea></label>
+                    </div>
+                    <p class="delivery-zone-status" data-delivery-zone-status aria-live="polite">Enter your area to calculate the delivery fee.</p>
+                </fieldset>
+                <p class="checkout-form-status" data-checkout-form-status aria-live="polite"></p>
+                <button class="button button-gold checkout-submit" type="submit">Pay Now</button>
+            </form>
+            <aside class="checkout-order" aria-labelledby="order-summary-title">
+                <div class="checkout-order-header"><p class="section-label">Fresh from the kitchen</p><h2 id="order-summary-title">Order <em>summary</em></h2></div>
+                <div class="checkout-order-items" data-page-checkout-items></div>
+                <div class="checkout-totals">
+                    <div><span>Subtotal</span><strong data-page-subtotal>₦0</strong></div>
+                    <div><span data-page-fee-label>Delivery fee</span><strong data-page-fee>₦0</strong></div>
+                    <div class="checkout-grand-total"><span>Total amount</span><strong data-page-total>₦0</strong></div>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <div class="demo-payment-overlay" data-demo-payment-overlay hidden></div>
+    <section class="demo-payment-modal" data-demo-payment-modal aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="demo-payment-title">
+        <div class="demo-payment-header">
+            <div><p class="section-label">Demo payment</p><h2 id="demo-payment-title">Complete <em>payment.</em></h2></div>
+            <button class="demo-payment-close" data-demo-payment-close type="button" aria-label="Close demo payment">×</button>
+        </div>
+        <p class="demo-payment-note">This is a simulated payment for the MAX KITCHEN prototype. No money will be charged.</p>
+        <div class="demo-payment-address"><span>Delivery address</span><strong data-demo-payment-address></strong></div>
+        <div class="demo-payment-amount"><span>Order total</span><strong data-demo-payment-total>₦0</strong></div>
+        <fieldset class="demo-payment-methods">
+            <legend>Choose a demo payment method</legend>
+            <label><input type="radio" name="demo-payment-method" value="Card" checked><span><strong>Card</strong><small>Simulated card payment</small></span></label>
+            <label><input type="radio" name="demo-payment-method" value="Bank Transfer"><span><strong>Bank Transfer</strong><small>Simulated transfer confirmation</small></span></label>
+        </fieldset>
+        <p class="demo-payment-status" data-demo-payment-status aria-live="polite"></p>
+        <button class="button button-gold demo-payment-confirm" data-demo-payment-confirm type="button">Confirm Demo Payment</button>
+    </section>
+
+    <footer class="site-footer" data-site-footer></footer>
+    <script src="js/site-components.js" defer></script>
+    <script src="js/script.js" defer></script>
+</body>
+</html>

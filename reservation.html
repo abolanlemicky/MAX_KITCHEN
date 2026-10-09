@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-NG">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Request a table at MAX KITCHEN in Abeokuta.">
+    <title>Reserve a Table | MAX KITCHEN Abeokuta</title>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="MAX KITCHEN">
+    <meta property="og:title" content="Reserve a Table | MAX KITCHEN Abeokuta">
+    <meta property="og:description" content="Request a memorable dining experience at MAX KITCHEN in Abeokuta.">
+    <meta property="og:url" content="https://maxkitchen.ng/reservation.html">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1515003193392-cf4d1c6d6b9f?auto=format&fit=crop&w=1600&q=80">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Reserve a Table | MAX KITCHEN Abeokuta">
+    <meta name="twitter:description" content="Request a memorable dining experience at MAX KITCHEN in Abeokuta.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1515003193392-cf4d1c6d6b9f?auto=format&fit=crop&w=1600&q=80">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="MAX KITCHEN home">MAX <span>KITCHEN</span></a>
+        <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false"><span></span><span></span><span></span><b>Menu</b></button>
+        <nav class="site-navigation" id="site-navigation" aria-label="Primary navigation">
+            <div class="nav-links"><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="about.html">About</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></div>
+            <a class="nav-reserve" href="reservation.html" aria-current="page">Reserve a Table</a>
+        </nav>
+    </header>
+
+    <main id="main-content" class="reservation-page">
+        <section class="reservation-hero" aria-labelledby="reservation-title">
+            <div class="reservation-hero-content reveal">
+                <p class="eyebrow">Your table awaits</p>
+                <h1 id="reservation-title">Reserve a <em>moment.</em></h1>
+                <p>Tell us when you would like to gather, and we will shape the evening around you.</p>
+            </div>
+        </section>
+
+        <section class="reservation-section content-section" aria-labelledby="reservation-form-title">
+            <div class="reservation-intro reveal-on-scroll">
+                <p class="section-label">Reservation Request</p>
+                <h2 id="reservation-form-title">Make it an <em>occasion.</em></h2>
+                <p>Complete the details below and share any notes that will help us prepare for your visit.</p>
+                <p class="reservation-note">This is a frontend demonstration. Your request is not stored or sent to the restaurant.</p>
+            </div>
+
+            <form class="reservation-form reveal-on-scroll" data-reservation-form novalidate>
+                <div class="reservation-form-grid">
+                    <div class="form-field">
+                        <label for="full-name">Full Name</label>
+                        <input id="full-name" name="fullName" type="text" autocomplete="name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="phone">Phone</label>
+                        <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+234 800 000 0000" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="guests">Number of Guests</label>
+                        <select id="guests" name="guests" required>
+                            <option value="" selected disabled>Select guests</option>
+                            <option>1 guest</option>
+                            <option>2 guests</option>
+                            <option>3 guests</option>
+                            <option>4 guests</option>
+                            <option>5 guests</option>
+                            <option>6+ guests</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="date">Date</label>
+                        <input id="date" name="date" type="date" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="time">Time</label>
+                        <input id="time" name="time" type="time" required>
+                    </div>
+                    <div class="form-field form-field-full">
+                        <label for="special-request">Special Request</label>
+                        <textarea id="special-request" name="specialRequest" placeholder="Dietary notes, celebrations or anything we should know"></textarea>
+                    </div>
+                </div>
+                <button class="button button-gold reservation-submit" type="submit">Request Reservation</button>
+                <p class="reservation-disclaimer">Frontend demonstration only. Submitting this form will display a confirmation without contacting or storing anything.</p>
+            </form>
+        </section>
+    </main>
+
+    <div class="reservation-modal" data-reservation-modal role="dialog" aria-modal="true" aria-labelledby="reservation-confirmation-title" aria-hidden="true">
+        <div class="reservation-modal-panel">
+            <button class="reservation-modal-close" type="button" data-reservation-close aria-label="Close confirmation">×</button>
+            <p class="section-label">Request Received</p>
+            <h2 id="reservation-confirmation-title">Thank you, <span data-reservation-name>guest</span>.</h2>
+            <p>Your reservation request has been received. This frontend demonstration does not store or send your details.</p>
+            <button class="button button-outline" type="button" data-reservation-done>Close</button>
+        </div>
+    </div>
+
+    <footer class="site-footer" data-site-footer></footer>
+    <script src="js/site-components.js" defer></script>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
